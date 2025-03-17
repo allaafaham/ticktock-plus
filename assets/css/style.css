@@ -34,6 +34,10 @@ body {
     text-align: center;
 }
 
+#stopwatch {
+    margin-top: 20px;
+}
+
 .labels {
     font-size: 12px;
 

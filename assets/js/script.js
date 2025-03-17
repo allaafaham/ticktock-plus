@@ -1,4 +1,4 @@
-
+//Variables for stopwatch
 let timer;
 let isRunning = false;
 let startTime;
@@ -7,8 +7,10 @@ const display = document.getElementById("stopwatch");
 display.textContent = "00:00:00";
 const lapContainer = document.getElementById("laps");
 
+// Stopwatch functions
 function updateTime() {
     const currentTime = Date.now() - startTime + elapsedTime;
+    const milliseconds = Math.floor((currentTime % 1000) / 10); // Convert to two-digit format
     const seconds = Math.floor((currentTime / 1000) % 60);
     const minutes = Math.floor((currentTime / 1000 / 60) % 60);
     const hours = Math.floor(currentTime / 1000 / 60 / 60);
@@ -16,8 +18,10 @@ function updateTime() {
     display.textContent = 
         (hours < 10 ? "0" : "") + hours + ":" + 
         (minutes < 10 ? "0" : "") + minutes + ":" + 
-        (seconds < 10 ? "0" : "") + seconds;
+        (seconds < 10 ? "0" : "") + seconds + "." + 
+        (milliseconds < 10 ? "0" : "") + milliseconds;
 }
+
 
 function startStopwatch() {
     if (!isRunning) {
