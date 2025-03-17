@@ -38,7 +38,7 @@
                 <a class="nav-link active" data-bs-toggle="tab" href="#clock">Clock</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#stopwatch">Stopwatch</a>
+                <a class="nav-link" data-bs-toggle="tab" href="#stopwatchTab">Stopwatch</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" data-bs-toggle="tab" href="#timer">Timer</a>
@@ -57,8 +57,27 @@
                     <label class="labels form-check-label" for="timeformat">24 mode</label>
                 </label>
             </div>
-            <div class="tab-pane fade" id="stopwatch">
-                <h2>Stopwatch</h2>
+            <!-- Stopwatch  -->
+            <div class="tab-pane fade" id="stopwatchTab">
+
+                <h2 id="stopwatch"> </h2>
+                <ul id="laps"></ul>
+                <div class="container text-center mt-3 mb-3">
+                    <div class="row g-2">
+                        <div class="col-6 col-md-3">
+                            <button id="start" class="btn btn-success w-70">Start</button>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <button id="stop" class="btn btn-danger w-70">Stop</button>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <button id="lap" class="btn btn-warning w-70">Lap</button>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <button id="reset" class="btn btn-secondary w-70">Reset</button>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="tab-pane fade" id="timer">
                 <h2>Timer</h2>
