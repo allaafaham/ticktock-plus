@@ -25,9 +25,18 @@ function updateClock() {
     document.getElementById("clockTime").innerText = `${hours}:${minutes}:${seconds}${ampm}`;
 }
 
+// Toggle dark mode
+
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+}
+
 // Update clock every second
 setInterval(updateClock, 1000);
-// Listen to the toggle if there is changes 
+// Listen to the toggles if there is changes 
 document.getElementById("timeformat").addEventListener("change", updateClock);
+document.getElementById("toggleDarkmode").addEventListener("change", toggleDarkMode);
+
+
 // Initialize clock on page load
 updateClock();

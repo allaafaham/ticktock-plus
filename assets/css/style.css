@@ -3,7 +3,16 @@
 
 
 body {
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
 }
+
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
 
 /* main  */
 
@@ -20,6 +29,11 @@ body {
     text-align: center;
 }
 
+.labels {
+    font-size: 12px;
+
+}
+
 #darkmode {
     margin-left: 10px;
     margin-top: 8px;
@@ -32,6 +46,8 @@ body {
     width: 25%;
 
 }
+
+
 /* #clock {
     font-size: 2rem;
     font-weight: bold;
