@@ -29,7 +29,7 @@ body {
 }
 .gamearea {
     border: 2px solid #000;
-    width: 50%; /* Any fixed or percentage width */
+    width: 75%; /* Any fixed or percentage width */
     margin: 0 auto;
     text-align: center;
 }
@@ -54,6 +54,10 @@ body {
     margin-bottom: 8px;
     width: 25%;
 
+}
+
+.TimerButton {
+    width: -webkit-fill-available;
 }
 
 
