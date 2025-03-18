@@ -59,6 +59,57 @@ function lapTime() {
     }
 }
 
+// Timer Functions
+function startTimer(duration) {
+    clearInterval(timer);
+    timeLeft = duration;
+    isPaused = false;
+    updateTimerDisplay();
+    timer = setInterval(countdown, 1000);
+}
+
+function countdown() {
+    if (timeLeft > 0 && !isPaused) {
+        timeLeft--;
+        updateTimerDisplay();
+    } else if (timeLeft === 0) {
+        clearInterval(timer);
+        audio.play();
+        alert("Time's up!"); // Optional visual alert
+    }
+}
+
+function pauseTimer() {
+    isPaused = true;
+}
+
+function resumeTimer() {
+    isPaused = false;
+}
+
+function resetTimer() {
+    clearInterval(timer);
+    timeLeft = 0;
+    updateTimerDisplay();
+}
+
+function updateTimerDisplay() {
+    const minutes = Math.floor(timeLeft / 60).toString().padStart(2, '0');
+    const seconds = (timeLeft % 60).toString().padStart(2, '0');
+    document.getElementById("timer-display").textContent = `${minutes}:${seconds}`;
+}
+
+function setPredefinedTime(seconds) {
+    startTimer(seconds);
+}
+
+function setCustomTime() {
+    const inputMinutes = parseInt(document.getElementById("custom-time").value, 10);
+    if (!isNaN(inputMinutes) && inputMinutes > 0) {
+        startTimer(inputMinutes * 60);
+    }
+}
+
 // Update the clock every second 
 
 function updateClock() {
