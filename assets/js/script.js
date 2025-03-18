@@ -1,8 +1,11 @@
-//Variables for stopwatch
+//Variables for stopwatch and timer
 let timer;
 let isRunning = false;
 let startTime;
 let elapsedTime = 0;
+let timeLeft = 0;
+let isPaused = false;
+const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/4387"); // Default beep sound
 const display = document.getElementById("stopwatch");
 display.textContent = "00:00:00";
 const lapContainer = document.getElementById("laps");
@@ -10,7 +13,7 @@ const lapContainer = document.getElementById("laps");
 // Stopwatch functions
 function updateTime() {
     const currentTime = Date.now() - startTime + elapsedTime;
-    const milliseconds = Math.floor((currentTime % 1000) / 10); // Convert to two-digit format
+    const milliseconds = Math.floor((currentTime % 1000) / 10); 
     const seconds = Math.floor((currentTime / 1000) % 60);
     const minutes = Math.floor((currentTime / 1000 / 60) % 60);
     const hours = Math.floor(currentTime / 1000 / 60 / 60);
