@@ -84,7 +84,10 @@ function pauseTimer() {
 }
 
 function resumeTimer() {
-    isPaused = false;
+    if (isPaused) {
+        isPaused = false;
+        timer = setInterval(countdown, 1000); // Restart the interval
+    }
 }
 
 function resetTimer() {
@@ -151,6 +154,14 @@ document.getElementById("start").addEventListener("click", startStopwatch);
 document.getElementById("stop").addEventListener("click", stopStopwatch);
 document.getElementById("reset").addEventListener("click", resetStopwatch);
 document.getElementById("lap").addEventListener("click", lapTime);
+// Eventlisteners for the timer
+document.getElementById("timer-pause").addEventListener("click", pauseTimer);
+document.getElementById("timer-resume").addEventListener("click", resumeTimer);
+document.getElementById("timer-reset").addEventListener("click", resetTimer);
+document.getElementById("timer-1min").addEventListener("click", () => setPredefinedTime(60));
+document.getElementById("timer-5min").addEventListener("click", () => setPredefinedTime(300));
+document.getElementById("timer-10min").addEventListener("click", () => setPredefinedTime(600));
+document.getElementById("set-custom-time").addEventListener("click", setCustomTime);
 
 // Initialize clock on page load
 updateClock();
