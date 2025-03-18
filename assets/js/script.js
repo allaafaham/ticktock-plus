@@ -1,5 +1,6 @@
 //Variables for stopwatch and timer
-let timer;
+let stopwatchInterval;
+let timerInterval;
 let isRunning = false;
 let startTime;
 let elapsedTime = 0;
@@ -29,26 +30,27 @@ function updateTime() {
 function startStopwatch() {
     if (!isRunning) {
         startTime = Date.now();
-        timer = setInterval(updateTime, 100);
+        stopwatchInterval = setInterval(updateTime, 100);
         isRunning = true;
     }
 }
 
 function stopStopwatch() {
     if (isRunning) {
-        clearInterval(timer);
+        clearInterval(stopwatchInterval);
         elapsedTime += Date.now() - startTime;
         isRunning = false;
     }
 }
 
 function resetStopwatch() {
-    clearInterval(timer);
+    clearInterval(stopwatchInterval);
     isRunning = false;
     elapsedTime = 0;
     display.textContent = "00:00:00";
-    lapContainer.innerHTML = ""; // Clear laps
+    lapContainer.innerHTML = "";
 }
+
 
 function lapTime() {
     if (isRunning) {
@@ -61,21 +63,22 @@ function lapTime() {
 
 // Timer Functions
 function startTimer(duration) {
-    clearInterval(timer);
+    clearInterval(timerInterval);
     timeLeft = duration;
     isPaused = false;
     updateTimerDisplay();
-    timer = setInterval(countdown, 1000);
+    timerInterval = setInterval(countdown, 1000);
 }
+
 
 function countdown() {
     if (timeLeft > 0 && !isPaused) {
         timeLeft--;
         updateTimerDisplay();
     } else if (timeLeft === 0) {
-        clearInterval(timer);
+        clearInterval(timerInterval);
         audio.play();
-        alert("Time's up!"); // Optional visual alert
+        alert("Time's up!");
     }
 }
 
@@ -91,7 +94,7 @@ function resumeTimer() {
 }
 
 function resetTimer() {
-    clearInterval(timer);
+    clearInterval(timerInterval);
     timeLeft = 0;
     updateTimerDisplay();
 }
