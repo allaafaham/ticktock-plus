@@ -1,65 +1,84 @@
 /* Google Fonts  */
 @import url("https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --accent-color: #ffcc00;
+  --font: "Arial", sans-serif;
+}
+
+/* Cyber Mode */
+.cyber-mode {
+  --bg-color: #0a001f;
+  --text-color: #00ffff;
+  --accent-color: #ff00ff;
+  --font: "Orbitron", sans-serif;
+}
+
+/* Retro Mode */
+.retro-mode {
+  --bg-color: #f5deb3;
+  --text-color: #5a2d0c;
+  --accent-color: #ff8c00;
+  --font: "Press Start 2P", cursive;
+}
+
+/* Dark Mode */
+.dark-mode {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --accent-color: #ffd700;
+  --font: "Arial", sans-serif;
+}
 
 body {
-    background-color: white;
-    color: black;
-    transition: background-color 0.3s, color 0.3s;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font);
 }
 
-.dark-mode {
-    background-color: #121212;
-    color: white;
-
+.dark-mode .gamearea , .cyber-mode .gamearea {
+  border: 2px solid white; /* Change to white in dark mode */
 }
-
-.dark-mode .gamearea {
-    border: 2px solid white; /* Change to white in dark mode */
-}
-
 
 /* main  */
 
 .gamename {
-    text-align: center;
-    margin-bottom: 20px;
-    margin-top: 100px;
-
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 100px;
 }
 .gamearea {
-    border: 2px solid #000;
-    width: 75%; /* Any fixed or percentage width */
-    margin: 0 auto;
-    text-align: center;
+  border: 2px solid #000;
+  width: 75%; /* Any fixed or percentage width */
+  margin: 0 auto;
+  text-align: center;
 }
 
 #stopwatch {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .labels {
-    font-size: 12px;
-
+  font-size: 12px;
 }
 
 #darkmode {
-    margin-left: 10px;
-    margin-top: 8px;
-    width: 25%;
+  margin-left: 10px;
+  margin-top: 8px;
+  width: 25%;
 }
 
 #timeformatstyle {
-    margin-left: 10px;
-    margin-bottom: 8px;
-    width: 25%;
-
+  margin-left: 10px;
+  margin-bottom: 8px;
+  width: 25%;
 }
 
 .TimerButton {
-    width: -webkit-fill-available;
+  width: -webkit-fill-available;
 }
-
 
 /* #clock {
     font-size: 2rem;

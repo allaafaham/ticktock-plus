@@ -151,7 +151,6 @@ function toggleDarkMode() {
 setInterval(updateClock, 1000);
 // Listen to the toggles if there is changes 
 document.getElementById("timeformat").addEventListener("change", updateClock);
-document.getElementById("toggleDarkmode").addEventListener("change", toggleDarkMode);
 // Eventlisteners for the stopwatch
 document.getElementById("start").addEventListener("click", startStopwatch);
 document.getElementById("stop").addEventListener("click", stopStopwatch);
@@ -166,5 +165,18 @@ document.getElementById("timer-5min").addEventListener("click", () => setPredefi
 document.getElementById("timer-10min").addEventListener("click", () => setPredefinedTime(600));
 document.getElementById("set-custom-time").addEventListener("click", setCustomTime);
 
+document.getElementById("theme-selector").addEventListener("change", function () {
+    document.body.classList.remove("dark-mode", "cyber-mode", "retro-mode");
+  
+    if (this.value === "dark") {
+      document.body.classList.add("dark-mode");
+    } else if (this.value === "cyber") {
+      document.body.classList.add("cyber-mode");
+    } else if (this.value === "retro") {
+      document.body.classList.add("retro-mode");
+    }
+  
+    localStorage.setItem("theme", this.value);
+  });
 // Initialize clock on page load
 updateClock();
