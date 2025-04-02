@@ -118,6 +118,13 @@ body {
   width: -webkit-fill-available;
 }
 
+#about {
+  margin-top: 3px;
+  justify-content: center;
+  display: grid;
+  font-size: 12px;
+}
+
 /* #clock {
     font-size: 2rem;
     font-weight: bold;
