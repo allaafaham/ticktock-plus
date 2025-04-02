@@ -1,3 +1,5 @@
+/* jshint esversion: 11 */
+
 //Variables for stopwatch and timer
 let stopwatchInterval;
 let timerInterval;
@@ -6,7 +8,7 @@ let startTime;
 let elapsedTime = 0;
 let timeLeft = 0;
 let isPaused = false;
-const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/4387"); // Default beep sound
+const audio = new Audio("assets/audio/timerend.mp3"); // Default beep sound
 const display = document.getElementById("stopwatch");
 display.textContent = "00:00:00";
 const lapContainer = document.getElementById("laps");
@@ -143,11 +145,23 @@ function updateClock() {
     document.getElementById("clockTime").innerText = `${hours}:${minutes}:${seconds}${ampm}`;
 }
 
-// Toggle dark mode
+ // Function to set the theme based on user selection
+function setTheme(theme) {
+    switch (theme) {
+      case "dark":
+        document.body.classList.add("dark-mode");
+        break;
+      case "cyber":
+        document.body.classList.add("cyber-mode");
+        break;
+      case "retro":
+        document.body.classList.add("retro-mode");
+        break;
+      default:
+        document.body.className = "";
+      }
+  }
 
-function toggleDarkMode() {
-    document.body.classList.toggle("dark-mode");
-}
 
 // Update clock every second
 setInterval(updateClock, 1000);
@@ -167,16 +181,20 @@ document.getElementById("timer-5min").addEventListener("click", () => setPredefi
 document.getElementById("timer-10min").addEventListener("click", () => setPredefinedTime(600));
 document.getElementById("set-custom-time").addEventListener("click", setCustomTime);
 
+document.addEventListener("DOMContentLoaded", function() {
+    let cookieTheme = localStorage.getItem("theme");
+
+    if (cookieTheme) {
+        setTheme(cookieTheme);
+        document.getElementById("theme-selector").value = cookieTheme; // Update the dropdown
+    }
+});
+
+
 document.getElementById("theme-selector").addEventListener("change", function () {
     document.body.classList.remove("dark-mode", "cyber-mode", "retro-mode");
   
-    if (this.value === "dark") {
-      document.body.classList.add("dark-mode");
-    } else if (this.value === "cyber") {
-      document.body.classList.add("cyber-mode");
-    } else if (this.value === "retro") {
-      document.body.classList.add("retro-mode");
-    }
+    setTheme(this.value);
   
     localStorage.setItem("theme", this.value);
   });

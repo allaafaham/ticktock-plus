@@ -125,6 +125,11 @@ body {
   font-size: 12px;
 }
 
+#laps {
+  list-style: none; /* Removes bullet points */
+  padding-left: 0;  /* Removes default padding */
+}
+
 /* #clock {
     font-size: 2rem;
     font-weight: bold;
