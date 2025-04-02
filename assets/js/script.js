@@ -80,7 +80,9 @@ function countdown() {
     } else if (timeLeft === 0) {
         clearInterval(timerInterval);
         audio.play();
-        alert("Time's up!");
+         // Show modal when the timer ends
+         var timerEndModal = new bootstrap.Modal(document.getElementById('timerEndModal'));
+         timerEndModal.show();
     }
 }
 
