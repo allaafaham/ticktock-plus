@@ -84,6 +84,19 @@ body {
     color: black;
 }
 
+#clockTime{
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#stopwatch {
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 .nav-tabs .nav-link.active {
     background-color: black;
     color: white ;
