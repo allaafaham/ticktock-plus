@@ -130,12 +130,20 @@ body {
   padding-left: 0;  /* Removes default padding */
 }
 
-/* #clock {
-    font-size: 2rem;
-    font-weight: bold;
-    color: yellow;
-    background: black;
-    padding: 10px;
-    display: inline-block;
-    border-radius: 5px;
-} */
+footer {
+  background-color: #333; /* Dark background */
+  color: white; /* White text */
+  font-size: 16px; /* Adjust the font size */
+}
+
+.fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+footer p {
+  margin: 0;
+  padding: 10px;
+}
