@@ -57,6 +57,15 @@ body {
       border-color: white;
   }
 
+  .retro-mode .nav-tabs .nav-link {
+      color: #5a2d0c;
+  }
+  .retro-mode .nav-tabs .nav-link.active {
+      background-color: #5a2d0c;
+      color: #f5deb3;
+      border-color: #5a2d0c;
+  }
+
 
 /* main  */
 

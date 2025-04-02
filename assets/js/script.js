@@ -89,9 +89,11 @@ function pauseTimer() {
 function resumeTimer() {
     if (isPaused) {
         isPaused = false;
-        timer = setInterval(countdown, 1000); // Restart the interval
+        clearInterval(timerInterval); // Prevent multiple intervals
+        timerInterval = setInterval(countdown, 1000); // Restart the original interval
     }
 }
+
 
 function resetTimer() {
     clearInterval(timerInterval);
