@@ -4,28 +4,7 @@
 [![GitHub last commit](https://img.shields.io/github/last-commit/allaafaham/ticktock-plus)](https://www.github.com/allaafaham/ticktock-plus/commits/main)
 [![GitHub repo size](https://img.shields.io/github/repo-size/allaafaham/ticktock-plus)](https://www.github.com/allaafaham/ticktock-plus)
 
-⚠️ INSTRUCTIONS ⚠️
-
-In this section, include a few paragraphs providing an overview of your project. Essentially, this part is your "sales pitch". Describe what the project hopes to accomplish, who it is intended to target, and how it will be useful to the target audience.
-
-⚠️ --- END --- ⚠️
-
-🛑 NOTES 🛑
-
-Do not add a **Table of Contents** to your Markdown files. GitHub has these built-in automatically using the headers/hashtags.
-
-Don't add screenshots for the README/TESTING into your `assets` or `static` folders. Create a new folder at the root-level called `documentation`. Consider creating sub-directories within `documentation` to handle things like `wireframes`, `features`, `validation`, `responsiveness`, etc.
-
-**Site Mockups**
-*([amiresponsive](https://ui.dev/amiresponsive?url=https://allaafaham.github.io/ticktock-plus), [techsini](https://techsini.com/multi-mockup), etc.)*
-Having issues generating site mockups? This is likely due to security policies with your deployed site.
-If you open up your DevTools, there may be an error referencing `X-Frame-Options`.
-
-For Chrome users, head over to http://bit.ly/3iRPn4u and install the extension within your browser. Once installed, navigate back to the mockup site of your choice. You should find your site rendering in the various devices now.
-
-Alternatively, open your project in Gitpod and run the server. Once the site is running, click the `Ports` tab from your Gitpod Terminal. Click the padlock on the appropriate port for your project (`Flask: 5000`, `Django: 8000`). This will make your local page public temporarily. Now, copy the URL of your live-preview page into the responsive tool above. You should find your site rendering in the various devices.
-
-🛑 --- END ---- 🛑
+TickTock+ is a customizable digital clock featuring a timer and stopwatch with an intuitive user interface. Designed for productivity and time management, this application allows users to track time efficiently with various modes and themes. The project is built using HTML, CSS, and JavaScript, ensuring responsiveness and ease of use across different devices.
 
 ![screenshot](documentation/mockup.png)
 
@@ -40,43 +19,43 @@ source: [ticktock-plus amiresponsive](https://ui.dev/amiresponsive?url=https://a
 
 #### 1. Strategy Plane
 ##### Purpose
-- Provide users with a simple and accessible way to perform basic mathematical operations.
-- Deliver instant feedback to improve usability and encourage learning.
-- Support accessibility and user-friendly interactions.
+- Provide users with a sleek and customizable time-tracking tool.
+- Allow users to switch between a clock, timer, and stopwatch seamlessly.encourage learning.
+- Enhance user experience with multiple visual themes.
 
 ##### Primary User Needs
-- Perform calculations quickly and accurately.
-- Understand errors and correct them easily.
-- Track performance to motivate self-improvement.
+- View a real-time digital clock.
+- Use a stopwatch with lap functionality.
+- Set a countdown timer with pause, resume, and reset features.
+- Customize the appearance with different themes.
 
 ##### Business Goals
-- Encourage users to engage with the app for educational and recreational purposes.
-- Showcase a well-designed, accessible tool that supports learning.
+- Improve time management for users.
+- Encourage engagement through customization options.
 
 #### 2. Scope Plane
 ##### Features
 - A full list of [Features](#features) can be viewed in detail below.
 
 ##### Content Requirements
-- Clear labels and instructions for input and operator buttons.
-- Error messages for invalid inputs.
-- Instant calculation results.
+- Instructions on using the stopwatch, timer, and clock features.
+- Clear labels and instructions for input and buttons.
 - Statistics display for tracking correct/incorrect equations.
 
 #### 3. Structure Plane
 ##### Information Architecture
 - **Navigation Menu**:
-  - Simple navbar with accessible links.
+  - Links to Clock, Timer, Stopwatch
 - **Hierarchy**:
   - Clear and prominent placement of the input fields and operator buttons.
-  - Visible results area and error messages.
+  - Theme settings prominently accessible for user customization.
 
 ##### User Flow
-1. User lands on the home page → reads brief instructions.
-2. Inputs two numbers → selects an operator.
-3. Sees instant results or an error message if input is invalid.
-4. Views correct/incorrect equation feedback.
-5. Starts fresh with the next calculation.
+1. User lands on the home page → sees the digital clock.
+2. Navigates to the stopwatch and starts tracking laps.
+3. Switches to the timer and sets a countdown with a sound alert.
+4. Adjusts the theme in settings for a personalized experience.
+5. Navigates to the About section to read about the website.
 
 #### 4. Skeleton Plane
 ##### Wireframe Suggestions
@@ -89,62 +68,40 @@ source: [ticktock-plus amiresponsive](https://ui.dev/amiresponsive?url=https://a
 
 ### Colour Scheme
 
-⚠️INSTRUCTIONS ⚠️
+TickTock+ offers multiple themes for a personalized experience:
 
-Explain your colors and color scheme. Consider adding a link and screenshot for your color scheme using [coolors](https://coolors.co/generate).
+- Light Mode: Default white background with dark text.
 
-When you add a color to the palette, the URL is dynamically updated, making it easier for you to return back to your color palette later if needed. See example below:
+- Dark Mode: Black background with white highlights.
 
-⚠️ --- END --- ⚠️
+- Cyber Mode: Neon colors and a futuristic font.
 
-I used [coolors.co](https://coolors.co/080708-3772ff-df2935-fdca40-e6e8e6) to generate my color palette.
-
-- `#000000` primary text.
-- `#3772FF` primary highlights.
-- `#DF2935` secondary text.
-- `#FDCA40` secondary highlights.
-
-![screenshot](documentation/coolors.png)
+- Retro Mode: Classic digital clock aesthetics.
 
 ### Typography
 
-⚠️ INSTRUCTIONS ⚠️
+- The Font Arial was used for the light and dark modes.
 
-Explain any fonts and icon libraries used, like **Google Fonts**, **Font Awesome**, etc. Consider adding a link to each font used, the Font Awesome site (if used), or similar icon library.
+- The Font Orbitron was used for the cyber mode.
 
-⚠️ --- END --- ⚠️
-
-- [Montserrat](https://fonts.google.com/specimen/Montserrat) was used for the primary headers and titles.
-- [Lato](https://fonts.google.com/specimen/Lato) was used for all other secondary text.
-- [Font Awesome](https://fontawesome.com) icons were used throughout the site, such as the social media icons in the footer.
+- The Font Press Start 2P was used for the retro mode.
 
 ## User Stories
 
-⚠️ INSTRUCTIONS ⚠️
-
-In this section, list all of your possible user stories for the project. Samples have been provided below using the example walkthrough project for your inspiration. Make sure to adjust to match your own project features!
-
-⚠️ --- END --- ⚠️
-
 | Target | Expectation | Outcome |
 | --- | --- | --- |
-| As a user | I would like to input two numbers and select an operator (`+`, `-`, `*`, `/`) | so that I can calculate a result. |
-| As a user | I would like the application to show me an error message if I enter empty input (`NaN`) | so that I understand what went wrong. |
-| As a user | I would like the calculation to happen instantly after I select an operator | so that I get my result quickly without waiting. |
-| As a user | I would like the application to have clear and large buttons for each operator | so that I can easily select the correct one on any device. |
-| As a user | I would like the application to have high-contrast colors and accessible fonts | so that I can easily read and interact with it. |
-| As a user | I would like clear labels and instructions | so that I understand how to use the app without confusion. |
-| As a user | I would like the app to show me the correct result if my equation was incorrect | so that I understand how the answer was calculated. |
-| As a user |  I would like to see how many equations I get correct or incorrect | so I can push myself to improve my math skills. |
-| As a user | I would like to see a 404 error page if I get lost | so that it's obvious that I've stumbled upon a page that doesn't exist. |
+| As a user | I want to see the current time displayed in a clear and readable format | so that I can check the time easily. |
+| As a user | I want a stopwatch function that can start, stop, and reset | so that I can track elapsed time. |
+| As a user | I want a countdown timer where I can set a specific duration, start, pause, and reset it | so that I can use it for tasks. |
+| As a user | I want a simple and intuitive interface | so that I can use the clock, timer, and stopwatch without confusion. |
+| As a user | I want to customize the clock's appearance (e.g., dark mode) | so that it matches my preferences. |
+| As a user | I want the stopwatch to record lap times | so that I can track multiple intervals. |
+| As a user | I want sound or visual alerts when the countdown timer reaches zero | so that I know when time is up. |
+| As a user | I want the clock to display time in both 12-hour and 24-hour formats | so that I can choose my preferred time format. |
+| As a user | I want an option to set multiple timers at once | so that I can track different tasks simultaneously. |
+
 
 ## Wireframes
-
-⚠️ INSTRUCTIONS ⚠️
-
-If you've created wireframes or mock-ups, use this section to display screenshots of your wireframes. The example table below uses sample pages from the walkthrough project to give you some inspiration for your own project, so please adjust accordingly.
-
-⚠️ --- END --- ⚠️
 
 To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.
 I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
@@ -152,55 +109,24 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 | Page | Mobile | Tablet | Desktop |
 | --- | --- | --- | --- |
 | Home | ![screenshot](documentation/wireframes/mobile-home.png) | ![screenshot](documentation/wireframes/tablet-home.png) | ![screenshot](documentation/wireframes/desktop-home.png) |
-| 404 | ![screenshot](documentation/wireframes/mobile-404.png) | ![screenshot](documentation/wireframes/tablet-404.png) | ![screenshot](documentation/wireframes/desktop-404.png) |
 
 ## Features
 
-⚠️ INSTRUCTIONS ⚠️
-
-In this section, you should go over the different parts of your project, and describe each feature. You should explain what value each of the features provides for the user, focusing on your target audience, what they want to achieve, and how your project can help them achieve these things.
-
-**IMPORTANT**: Remember to always include a screenshot of each individual feature!
-
-⚠️ --- END --- ⚠️
-
 ### Existing Features
-
 | Feature | Notes | Screenshot |
 | --- | --- | --- |
-| Operators | The mathematical operators (`+`, `-`, `*`, `/`) are large and colorful to allow users to easily select their preferred method of testing their calculation skills. Each operator is color-coded, and has the text name as well for easy identification. | ![screenshot](documentation/features/operators.png) |
-| Equation | This section visibly displays the current equation to be calculated, dynamically updated to use the specific operator that the user has selected above. The empty `<input>` field allows users to enter valid numerical values to test their math skills. | ![screenshot](documentation/features/equation.png) |
-| Submit Answer | This button allows user to submit their calculation to see if they've successfully answered the current equation. Users can also use the `[ENTER]` key on their keyboard to submit their answers, too. | ![screenshot](documentation/features/submit-answer.png) |
-| Scores | This section tallies the total number of *correct* and *incorrect* answers that the user has calculated. Green to represent *correct*, and red to represent *incorrect*. | ![screenshot](documentation/features/scores.png) |
-| Alerts | Depending on whether or not the user gets the calculation correct or incorrect, alerts are used to provide simple feedback to the user. This showcases if they got it correct, or if they've gotten it incorrect, therefore also showing the correct answer. | ![screenshot](documentation/features/alerts.png) |
-| 404 | The 404 error page will indicate when a user has somehow navigated to a page that doesn't exist. This replaces the default GitHub Pages 404 page, and ties-in with the look and feel of the *Love Maths* site by using the standard navbar and footer. | ![screenshot](documentation/features/404.png) |
+| Clock | The clock displays the current time in a clear and readable format. Users can choose between 12-hour and 24-hour formats for their preference. | ![screenshot](documentation/features/clock.png) |
+| Stopwatch | The stopwatch includes start, stop, and reset functionality. Users can track elapsed time, with the option to record lap times as well. | ![screenshot](documentation/features/stopwatch.png) |
+| Timer | The timer allows users to set specific durations for tasks, with start, pause, and reset options. Users can also set multiple timers at once. | ![screenshot](documentation/features/timer.png) |
+| Customization | Users can switch between themes (White, Dark, Cyber, Retro) to personalize the look and feel of the app. This provides a visually pleasing experience based on the user's preferences. | ![screenshot](documentation/features/customization.png) |
+| About Page | A link is provided beneath the main content box that redirects users to an about page with information about the app and its features. | ![screenshot](documentation/features/about-page.png) |
 
 ### Future Features
 
-⚠️ INSTRUCTIONS ⚠️
-
-Do you have additional ideas that you'd like to include on your project in the future? Fantastic, list them here! It's always great to have plans for future improvements. Consider adding any helpful links or notes to help remind you in the future, if you revisit the project in a couple years.
-
-A few examples are listed below to align with possible ways to improve on the sample walkthrough project, to give you some inspiration.
-
-⚠️ --- END ---⚠️
-
-- **Advanced Calculations**: Add support for more complex mathematical operations, like square roots, powers, logarithms, trigonometry (sin, cos, tan), etc.
-- **Equation History**: Display a running log of previous calculations with the ability to recall or reuse past results.
-- **Multi-Step Equations**: Allow users to input multi-step calculations (e.g., `5 + 3 * 2 - 4`) with proper order of operations.
-- **Graphing Capabilities**: Integrate a graphing feature where users can plot functions or equations visually.
-- **Fraction Support**: Add functionality to handle calculations with fractions, including simplifications and conversions between fractions and decimals.
-- **Unit Conversions**: Introduce a feature to convert between different units of measurement (e.g., meters to feet, Celsius to Fahrenheit).
-- **Equation Solver**: Add the ability to solve algebraic equations for a given variable (e.g., `2x + 5 = 13`).
-- **Memory Functions**: Include memory functions (`M+`, `M-`, `MR`) so users can store, add to, and recall values during their calculations.
-- **Input Validation**: Provide real-time feedback for invalid inputs, such as attempting to divide by zero or using incorrect syntax.
-- **Dark Mode**: Add a dark mode option to enhance user experience and reduce eye strain during extended use.
-- **Customizable Themes**: Allow users to choose different themes, colors, or layouts for personalizing their experience.
-- **Calculation Explanations**: Display step-by-step explanations of how the solution is derived, useful for educational purposes or beginners.
-- **Statistical Functions**: Introduce basic statistical operations such as mean, median, mode, and standard deviation.
-- **Save & Share Calculations**: Allow users to save or share their results via a link or social media, especially for complex equations or useful outputs.
-- **Voice Input**: Add a voice input option for users to dictate their calculations instead of typing.
-- **Educational Quizzes**: Implement math-based quizzes or games to help users improve their arithmetic skills while using the app.
+- **Stopwatch with Interval Training**: Enable users to set specific time intervals (e.g., 5 minutes work, 1-minute break) for workout sessions, studying, etc. Visual or audio cues when intervals end.
+- **Timer Notifications**: Users can set specific notifications when the timer reaches certain milestones (e.g., 1 minute remaining, halfway point), making it more interactive.
+- **Multiple Clocks**: Enable users to display multiple clocks for different time zones, useful for people working with international teams or with family in other regions.
+- **Countdown Sound Effects**: Let users select different sound effects for the countdown timer, creating a more immersive experience with audio cues.
 
 ## Tools & Technologies
 
@@ -216,25 +142,10 @@ A few examples are listed below to align with possible ways to improve on the sa
 | [![badge](https://img.shields.io/badge/GitHub_Pages-grey?logo=githubpages&logoColor=222222)](https://pages.github.com) | Hosting the deployed front-end site. |
 | [![badge](https://img.shields.io/badge/Balsamiq-grey?logo=barmenia&logoColor=CE0908)](https://balsamiq.com/wireframes) | Creating wireframes. |
 
-⚠️ NOTE ⚠️
-
-Want to add more?
-
-- Tutorial: https://shields.io/badges/static-badge
-- Icons/Logos: https://simpleicons.org
-  - FYI: not all logos are available to use
-
-🛑 --- END --- 🛑
 
 ## Agile Development Process
 
 ### GitHub Projects
-
-⚠️ TIP ⚠️
-
-Consider adding screenshots of your Projects Board(s), Issues (open and closed), and Milestone tasks.
-
-⚠️ --- END ---⚠️
 
 [GitHub Projects](https://www.github.com/allaafaham/ticktock-plus/projects) served as an Agile tool for this project. Through it, EPICs, User Stories, issues/bugs, and Milestone tasks were planned, then subsequently tracked on a regular basis using the Kanban project board.
 
@@ -256,7 +167,6 @@ I've decomposed my Epics into User Stories for prioritizing and implementing the
 - **Must Have**: guaranteed to be delivered - required to Pass the project (*max ~60% of stories*)
 - **Should Have**: adds significant value, but not vital (*~20% of stories*)
 - **Could Have**: has small impact if left out (*the rest ~20% of stories*)
-- **Won't Have**: not a priority for this iteration - future features
 
 ## Testing
 
@@ -310,91 +220,26 @@ By forking the GitHub Repository, you make a copy of the original repository on 
 
 ### Local VS Deployment
 
-⚠️ INSTRUCTIONS ⚠️
-
-Use this space to discuss any differences between the local version you've developed, and the live deployment site. Generally, there shouldn't be [m]any major differences, so if you honestly cannot find any differences, feel free to use the following example:
-
-⚠️ --- END --- ⚠️
-
 There are no remaining major differences between the local version when compared to the deployed version online.
 
 ## Credits
 
-⚠️ INSTRUCTIONS ⚠️
-
-In the following sections, you need to reference where you got your content, media, and any extra help. It is common practice to use code from other repositories and tutorials (which is totally acceptable), however, it is important to be very specific about these sources to avoid potential plagiarism.
-
-⚠️ --- END ---⚠️
-
 ### Content
 
-⚠️ INSTRUCTIONS ⚠️
-
-Use this space to provide attribution links for any borrowed code snippets, elements, and resources. Ideally, you should provide an actual link to every resource used, not just a generic link to the main site. If you've used multiple components from the same source (such as Bootstrap), then you only need to list it once, but if it's multiple Codepen samples, then you should list each example individually. If you've used AI for some assistance (such as ChatGPT or Perplexity), be sure to mention that as well. A few examples have been provided below to give you some ideas.
-
-⚠️ --- END ---⚠️
 
 | Source | Notes |
 | --- | --- |
 | [Markdown Builder](https://markdown.2bn.dev) | Help generating Markdown files |
-| [Chris Beams](https://chris.beams.io/posts/git-commit) | "How to Write a Git Commit Message" |
 | [Love Maths](https://codeinstitute.net) | Code Institute walkthrough project inspiration |
-| [WebDevSimplified](https://www.youtube.com/watch?v=riDzcEQbX6k) | Inspiration for a quiz app |
-| [WebDevSimplified](https://www.youtube.com/watch?v=1yS-JV4fWqY) | Inspiration for Rock Paper Scissors |
-| [JavaScript30](https://javascript30.com) | Additional JS help |
 | [ChatGPT](https://chatgpt.com) | Help with code logic and explanations |
 
 ### Media
 
-⚠️ INSTRUCTIONS ⚠️
-
-Use this space to provide attribution links to any media files borrowed from elsewhere (images, videos, audio, etc.). If you're the owner (or a close acquaintance) of some/all media files, then make sure to specify this information. Let the assessors know that you have explicit rights to use the media files within your project. Ideally, you should provide an actual link to every media file used, not just a generic link to the main site, unless it's AI-generated artwork.
-
-Looking for some media files? Here are some popular sites to use. The list of examples below is by no means exhaustive. Within the Code Institute Slack community, you can find more "free media" links by sending yourself (or Slackbot) the following command: `!freemedia`.
-
-- Images
-    - [Pexels](https://www.pexels.com)
-    - [Unsplash](https://unsplash.com)
-    - [Pixabay](https://pixabay.com)
-    - [Lorem Picsum](https://picsum.photos) (placeholder images)
-    - [Wallhere](https://wallhere.com) (wallpaper / backgrounds)
-    - [This Person Does Not Exist](https://thispersondoesnotexist.com) (reload to get a new person)
-- Audio
-    - [Audio Micro](https://www.audiomicro.com/free-sound-effects)
-- Video
-    - [Videvo](https://www.videvo.net)
-- Image Compression
-    - [TinyPNG](https://tinypng.com) (for images <5MB)
-    - [CompressPNG](https://compresspng.com) (for images >5MB)
-
-A few examples have been provided below to give you some ideas on how to do your own Media credits.
-
-⚠️ --- END ---⚠️
-
 | Source | Notes |
 | --- | --- |
-| [favicon.io](https://favicon.io) | Generating the favicon |
-| [Font Awesome](https://fontawesome.com) | Icons used throughout the site |
-| [Pexels](https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg) | Hero image |
-| [Wallhere](https://c.wallhere.com/images/9c/c8/da4b4009f070c8e1dfee43d25f99-2318808.jpg!d) | Background wallpaper |
-| [Pixabay](https://cdn.pixabay.com/photo/2017/09/04/16/58/passport-2714675_1280.jpg) | Background wallpaper |
-| [Mixkit](https://mixkit.co/free-sound-effects/game) | Royalty-free sound effects for the game |
-| [DALL-E 3](https://openai.com/index/dall-e-3) | AI generated artwork |
-| [TinyPNG](https://tinypng.com) | Compressing images < 5MB |
-| [CompressPNG](https://compresspng.com) | Compressing images > 5MB |
-| [CloudConvert](https://cloudconvert.com/webp-converter) | Converting images to `.webp` |
 
 ### Acknowledgements
-
-⚠️ INSTRUCTIONS ⚠️
-
-Use this space to provide attribution and acknowledgement to any supports that helped, encouraged, or supported you throughout the development stages of this project. It's always lovely to appreciate those that help us grow and improve our developer skills. A few examples have been provided below to give you some ideas.
-
-⚠️ --- END ---⚠️
 
 - I would like to thank my Code Institute mentor, [Tim Nelson](https://www.github.com/TravelTimN) for the support throughout the development of this project.
 - I would like to thank the [Code Institute](https://codeinstitute.net) Tutor Team for their assistance with troubleshooting and debugging some project issues.
 - I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support; it kept me going during periods of self doubt and impostor syndrome.
-- I would like to thank my partner, for believing in me, and allowing me to make this transition into software development.
-- I would like to thank my employer, for supporting me in my career development change towards becoming a software developer.
-
