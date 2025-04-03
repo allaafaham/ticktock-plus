@@ -3,7 +3,6 @@
 :root {
   --bg-color: #ffffff;
   --text-color: #000000;
-  --accent-color: #ffcc00;
   --font: "Arial", sans-serif;
 }
 
@@ -17,7 +16,6 @@ body {
 .cyber-mode {
   --bg-color: #000814; /* Deep dark blue for a high-tech feel */
   --text-color: #00ffcc; /* Neon cyan for a futuristic glow */
-  --accent-color: #ff00ff; /* Bright magenta for contrast */
   --font: "Orbitron", sans-serif;
 }
 
@@ -25,7 +23,6 @@ body {
 .retro-mode {
   --bg-color: #f5deb3;
   --text-color: #5a2d0c;
-  --accent-color: #ff8c00;
   --font: "Press Start 2P", cursive;
 }
 
@@ -33,7 +30,6 @@ body {
 .dark-mode {
   --bg-color: #121212;
   --text-color: #ffffff;
-  --accent-color: #ffd700;
   --font: "Arial", sans-serif;
 }
 
