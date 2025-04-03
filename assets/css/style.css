@@ -93,6 +93,10 @@ body {
   border-color: #5a2d0c;
 }
 
+.retro-mode .btn-secondary {
+  background-color: #5a2d0c;
+  border-color: #5a2d0c;
+}
 /* main  */
 
 .gamename {
