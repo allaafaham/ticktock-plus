@@ -183,6 +183,7 @@ document.getElementById("timer-5min").addEventListener("click", () => setPredefi
 document.getElementById("timer-10min").addEventListener("click", () => setPredefinedTime(600));
 document.getElementById("set-custom-time").addEventListener("click", setCustomTime);
 
+// Check if a theme is saved in local storage and apply it
 document.addEventListener("DOMContentLoaded", function() {
     let cookieTheme = localStorage.getItem("theme");
 
@@ -200,5 +201,6 @@ document.getElementById("theme-selector").addEventListener("change", function ()
   
     localStorage.setItem("theme", this.value);
   });
+  
 // Initialize clock on page load
 updateClock();
