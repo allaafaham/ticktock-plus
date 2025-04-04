@@ -20,7 +20,7 @@ source: [ticktock-plus amiresponsive](https://ui.dev/amiresponsive?url=https://a
 #### 1. Strategy Plane
 ##### Purpose
 - Provide users with a sleek and customizable time-tracking tool.
-- Allow users to switch between a clock, timer, and stopwatch seamlessly.encourage learning.
+- Allow users to switch between a clock, timer, and stopwatch seamlessly.
 - Enhance user experience with multiple visual themes.
 
 ##### Primary User Needs
@@ -40,15 +40,15 @@ source: [ticktock-plus amiresponsive](https://ui.dev/amiresponsive?url=https://a
 ##### Content Requirements
 - Instructions on using the stopwatch, timer, and clock features.
 - Clear labels and instructions for input and buttons.
-- Statistics display for tracking correct/incorrect equations.
+
 
 #### 3. Structure Plane
 ##### Information Architecture
 - **Navigation Menu**:
   - Links to Clock, Timer, Stopwatch
 - **Hierarchy**:
-  - Clear and prominent placement of the input fields and operator buttons.
   - Theme settings prominently accessible for user customization.
+   - Clear and prominent placement of the input field and  buttons.
 
 ##### User Flow
 1. User lands on the home page → sees the digital clock.

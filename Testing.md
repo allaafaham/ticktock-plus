@@ -74,7 +74,7 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 | As a user | I want the stopwatch to record lap times | so that I can track multiple intervals. | x |
 | As a user | I want sound or visual alerts when the countdown timer reaches zero | so that I know when time is up. | x |
 | As a user | I want the clock to display the time in both 12-hour and 24-hour formats | so that I can choose my preferred time format. | x |
-| As a user | I want an option to set multiple timers at once | so that I can track different tasks simultaneously. | x |
+| As a user | I want an option to set multiple timers at once | so that I can track different tasks simultaneously. | in the Future |
 
 
 > [!IMPORTANT]
